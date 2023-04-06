@@ -49,17 +49,14 @@ function App() {
                 onChange={handleImageUpload}
               />
             </label>
-            <p className="mt-4 text-gray-500">
-              Click the button to upload an image
-            </p>
           </>
         )}
         {selectedImage && (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="absolute w-full h-full flex items-center justify-center">
             <img
               src={selectedImage}
               alt="uploaded"
-              className="max-w-full max-h-full"
+              className="absolute max-w-full max-h-full"
             />
           </div>
         )}
