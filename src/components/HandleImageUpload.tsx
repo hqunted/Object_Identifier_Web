@@ -16,7 +16,7 @@ export const HandleImageUpload = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-blue-600"></div>
-      <div className="absolute top-[6%] left-[6%] p-4 text-blue-600 font-bold text-6xl font-amaticsc shadow-xl transform hover:scale-110 transition duration-300">
+      <div className="absolute animate-pulse top-[6%] left-[6%] p-4 text-indigo-900 font-bold text-6xl font-amaticsc drop-shadow-lg transform hover:scale-110 transition duration-300">
         Triangle Analyzer
       </div>
       {[...Array(60)].map((_, index) => (
@@ -39,11 +39,12 @@ export const HandleImageUpload = () => {
           }}
         ></div>
       ))}
-      <div className="flex flex-col items-center justify-center w-full h-full">
+      <div className="flex flex-col items-center justify-center w-full h-full ">
+        //No image has been selected
         {!selectedImage && (
           <>
-            <div className="absolute bg-gray-600 w-1/2 h-1/2 rounded-lg opacity-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-            <label className="absolute bg-white text-blue-500 px-4 py-2 rounded-lg mt-8 hover:bg-blue-500 hover:text-white cursor-pointer">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-300 to-blue-600 w-1/2 h-1/2 rounded-lg shadow-lg"></div>
+            <label className="absolute animate-bounce bg-white text-blue-500 px-4 py-2 rounded-lg mt-8 hover:bg-blue-500  hover:text-white cursor-pointer">
               Upload Image
               <input
                 type="file"
@@ -54,13 +55,23 @@ export const HandleImageUpload = () => {
             </label>
           </>
         )}
+        //Image has been selected
         {selectedImage && (
           <div className="absolute w-full h-full flex items-center justify-center">
-            <img
-              src={selectedImage}
-              alt="uploaded"
-              className="absolute max-w-full max-h-full"
-            />
+            <div className="flex absolute w-full h-full items-center justify-center">
+              <div className="w-1/2 h-full flex items-center justify-center">
+                <div className="w-[65%] h-[65%] bg-gray-600 rounded-lg opacity-50">
+                  <img
+                    src={selectedImage}
+                    alt="uploaded"
+                    className="absolute max-w-full max-h-full object-contain rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="w-1/2 h-full flex items-center justify-center">
+                <div className="w-[65%] h-[65%] bg-gray-600 rounded-lg opacity-50"></div>
+              </div>
+            </div>
           </div>
         )}
       </div>
