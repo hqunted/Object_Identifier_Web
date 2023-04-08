@@ -1,9 +1,9 @@
 import "./App.css";
 
-import { HandleImageUpload } from "./components/HandleImageUpload";
+import { Home } from "./pages/Home";
 
 function App() {
-  return <HandleImageUpload />;
+  return <Home />;
 }
 
 export default App;
