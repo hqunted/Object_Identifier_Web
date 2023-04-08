@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Header } from "../components/Header";
-import { BackgroundTriangles } from "../components/BackgroundTriangles";
 import { UploadImage } from "../components/UploadImage";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 import { ResultImage } from "./ResultImage";
@@ -22,11 +20,10 @@ export const Home = () => {
   return (
     <DefaultLayout>
       <div className="flex flex-col items-center justify-center w-full h-full ">
-        //No image has been selected
         {!selectedImage && (
           <UploadImage handleImageUpload={handleImageUpload} />
         )}
-        //Image has been selected
+
         {selectedImage && <ResultImage selectedImage={selectedImage} />}
       </div>
     </DefaultLayout>
