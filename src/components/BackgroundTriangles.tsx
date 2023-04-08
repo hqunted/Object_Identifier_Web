@@ -4,7 +4,9 @@ export const BackgroundTriangles = () => {
       {[...Array(60)].map((_, index) => (
         <div
           key={index}
-          className={`absolute h-6 w-6 blur-sm animate-triangle-${index + 1}`}
+          className={`absolute h-6 w-6 blur-sm animate-waving-triangle ${
+            index + 1
+          }`}
           style={{
             top: `${Math.floor(Math.random() * 101)}%`,
             left: `${Math.floor(Math.random() * 101)}%`,
