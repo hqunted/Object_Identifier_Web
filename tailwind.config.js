@@ -16,7 +16,7 @@ module.exports = {
         },
       },
       animation: {
-        "waving-hand": "wave 2s linear infinite",
+        "waving-triangle": "wave 2s linear infinite",
       },
       fontFamily: {
         amaticsc: ["Amatic SC", "sans-serif"],
