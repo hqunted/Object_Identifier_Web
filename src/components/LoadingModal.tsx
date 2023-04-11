@@ -1,9 +1,9 @@
 export const LoadingModal = () => {
   return (
     <>
-      <div className="flex absolute justify-center bg-gray-800 bg-opacity-90 align-middle items-center w-screen 2xl:pt-[40%] 2xl:p-[20%] xl:pt-[30%] xl:p-[10%] xl:pb-[30%] lg:pt-[20%] lg: p-[15%] lg:pb-[35%] md:pt-[100%] md:pb-[50%] sm:pb-[130%] ">
-        <div className="flex w-full 2xl:py-[20%] lg:py-[15%] lg:w-[55%] md:py-[35%] py-[50%] justify-center rounded-3xl transform bg-gradient-to-br from-blue-300 to-blue-600 shadow-lg">
-          <div className="flex rounded-2xl 2xl:text-7xl 2xl:p-[2%] xl:p-[5%] animate-waving-triangle xl:text-2xl lg:p-[3%] bg-white lg:text-2xl md:text-4xl md:p-[8%] text-blue-500 ">
+      <div className="flex absolute justify-center h-screen align-middle items-center w-screen 2xl:pb-[40%] 2xl:p-4xl xl:pt-lg xl:p-lg xl:pb-2.5xl lg:pt-lg lg:p-md lg:pb-2.5xl md:pt-3.5xl md:pb-3x">
+        <div className="flex w-full 2xl:py-3xl lg:py-1.5xl lg:w-6xl md:py-lg md:pb-3xl py-3xl justify-center rounded-3xl transform bg-gradient-to-br from-blue-300 to-blue-600 shadow-lg">
+          <div className="flex rounded-2xl 2xl:text-7xl 2xl:p-sm xl:p-xs animate-waving-triangle xl:text-2xl lg:p-xxs bg-white lg:text-2xl md:text-4xl md:p-[8%] text-blue-500 ">
             Processing
             <div className="flex animate-bounce">...</div>
           </div>

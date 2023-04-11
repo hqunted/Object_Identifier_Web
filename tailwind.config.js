@@ -2,9 +2,27 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    padding: {},
+    spacing: {
+      "4xs": "8px",
+      "3xs": "12px",
+      "2xs": "16px",
+      xxs: "24px",
+      xs: "32px",
+      sm: "48px",
+      md: "64px",
+      lg: "96px",
+      xl: "128px",
+      "1.5xl": "192px",
+      "2xl": "256px",
+      "2.5xl": "384px",
+      "3xl": "512px",
+      "3.5xl": "576px",
+      "4xl": "768px",
+      "5xl": "1024px",
+      "6xl": "1280px",
+    },
     screens: {
-      sm: "320px",
+      sm: "512px",
 
       md: "768px",
 
@@ -26,9 +44,14 @@ module.exports = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        bounce: {
+          "0%": { delay: "100" },
+          "50%": { delay: "500" },
+        },
       },
       animation: {
         "waving-triangle": "wave 2s linear infinite",
+        "bounce-loading": "bounce 2s",
       },
       fontFamily: {
         amaticsc: ["Amatic SC", "sans-serif"],
