@@ -1,4 +1,4 @@
-import { LoadingModal } from "../components/LoadingModal";
+import { ImageFrames } from "../components/ImageFrames";
 
 export interface selectedImage {
   selectedImage: string | undefined;
@@ -6,16 +6,14 @@ export interface selectedImage {
 
 export const ResultImage = ({ selectedImage }: selectedImage) => {
   return (
-    <div className=" w-full h-full  flex items-center justify-center">
-      <div className="flex w-6xl h-[90%] bg-gray-600 opacity-50 pb-[50%]"></div>
-      <div className="flex w-6xl h-[70%] bg-gray-600 opacity-50 pb-[25%]">
-        <img
-          src={selectedImage}
-          alt="uploaded"
-          className="absolute max-w-full max-h-full object-contain rounded-lg"
-        />
+    <div className=" w-full h-full flex items-center justify-center">
+      <div className="flex 2xl:w-6xl 2xl:h-6xl bg-gray-400 2xl:pb-5xl rounded-3xl ">
+        <ImageFrames imagePath={"https://picsum.photos/200/300"} />
       </div>
-      <LoadingModal />
+      <div className="w-4xl h-6xl"></div>
+      <div className="flex 2xl:w-6xl 2xl:h-6xl bg-gray-400 2xl:pb-5xl rounded-3xl">
+        {selectedImage ? <ImageFrames imagePath={selectedImage} /> : null}
+      </div>
     </div>
   );
 };
