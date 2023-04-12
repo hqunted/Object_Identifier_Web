@@ -7,9 +7,9 @@ export const ImageFrames = ({ imagePath }: ImageFrameProps) => {
     <div>
       <img
         src={imagePath}
-        alt="Image"
-        className="absolute flex w-6xl h-6xl object-contain p-lg bg-gradient-to-br from-blue-300 to-blue-600 "
-      ></img>
+        alt="Frames"
+        className="absolute flex w-2.5xl h-2.5xl object-contain p-lg bg-gradient-to-br from-blue-300 to-blue-600 "
+      />
     </div>
   );
 };
