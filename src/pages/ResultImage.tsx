@@ -6,13 +6,17 @@ export interface selectedImage {
 
 export const ResultImage = ({ selectedImage }: selectedImage) => {
   return (
-    <div className=" w-full h-full flex 2xl:pl-2xl">
-      <div className="flex 2xl:w-2xl bg-gray-400 2xl:pb-xl rounded-3xl ">
-        <ImageFrames imagePath={"https://picsum.photos/200/300"} />
-      </div>
-      <div className="2xl:w-2.5xl"></div>
-      <div className="flex 2xl:w-2xl bg-gray-400 2xl:pb-xl rounded-3xl">
-        {selectedImage ? <ImageFrames imagePath={selectedImage} /> : null}
+    <div className="flex flex-col items-center justify-center w-full h-full ">
+      <div className="w-full max-w-screen-lg flex flex-col md:flex-col lg:flex-row justify-center items-center relative">
+        <div className="flex justify-center lg:pt-4xs lg:w-2.5xl lg:rounded-3xl">
+          <ImageFrames imagePath={"https://picsum.photos/200/300"} />
+        </div>
+        {selectedImage && (
+          <div className="flex justify-center lg:pt-4xs lg:w-2.5xl lg:rounded-3xl">
+            <ImageFrames imagePath={selectedImage} />
+          </div>
+        )}
+        <div className="bg-gradient-to-br from-blue-300 to-blue-600 rounded-3xl" />
       </div>
     </div>
   );
