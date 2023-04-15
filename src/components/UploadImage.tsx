@@ -14,6 +14,7 @@ export const UploadImage = ({ handleImageUpload }: UploadImageProps) => {
               accept="image/*"
               className="hidden"
               onChange={handleImageUpload}
+              alt="uploaded"
             />
           </label>
         </div>

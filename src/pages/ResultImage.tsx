@@ -16,6 +16,7 @@ export const ResultImage = ({ selectedImage }: selectedImage) => {
             <ImageFrames imagePath={selectedImage} />
           </div>
         )}
+
         <div className="bg-gradient-to-br from-blue-300 to-blue-600 rounded-3xl" />
       </div>
     </div>

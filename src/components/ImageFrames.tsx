@@ -1,8 +1,11 @@
+import { pingAPI } from "../services/pingAPI";
+
 interface ImageFrameProps {
   imagePath: string;
 }
 
 export const ImageFrames = ({ imagePath }: ImageFrameProps) => {
+  pingAPI(imagePath);
   return (
     <div>
       <img
