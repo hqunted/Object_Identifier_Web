@@ -12,6 +12,7 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "animated-tailwindcss": "^4.0.0",
+    "axios": "^1.3.5",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
