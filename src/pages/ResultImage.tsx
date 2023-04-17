@@ -1,4 +1,4 @@
-import { ImageFrames } from "../components/ImageFrames";
+import { ImageFrame } from "../components/ImageFrame";
 
 export interface selectedImage {
   selectedImage: string | undefined;
@@ -9,11 +9,11 @@ export const ResultImage = ({ selectedImage }: selectedImage) => {
     <div className="flex flex-col items-center justify-center w-full h-full ">
       <div className="w-full max-w-screen-lg flex flex-col md:flex-col lg:flex-row justify-center items-center relative">
         <div className="flex justify-center lg:pt-4xs lg:w-2.5xl lg:rounded-3xl">
-          <ImageFrames imagePath={"https://picsum.photos/200/300"} />
+          <ImageFrame imageData={"https://picsum.photos/200/300"} />
         </div>
         {selectedImage && (
           <div className="flex justify-center lg:pt-4xs lg:w-2.5xl lg:rounded-3xl">
-            <ImageFrames imagePath={selectedImage} />
+            <ImageFrame imageData={selectedImage} />
           </div>
         )}
 
