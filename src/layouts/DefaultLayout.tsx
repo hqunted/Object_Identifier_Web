@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { BackgroundTriangles } from "../components/BackgroundTriangles";
+import { BackgroundObjects } from "../components/BackgroundObjects";
 
 export interface DefaultLayoutProps {
   children: JSX.Element;
@@ -11,7 +11,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <div className="absolute inset-0"></div>
       <div>
         <Header />
-        <BackgroundTriangles />
+        <BackgroundObjects />
         {children}
       </div>
     </div>

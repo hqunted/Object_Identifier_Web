@@ -57,7 +57,7 @@ module.exports = {
         },
       },
       animation: {
-        "waving-triangle": "wave 2s linear infinite",
+        "waving-object": "wave 2s linear infinite",
         "bounce-loading": "bounce 2s",
       },
       fontFamily: {
