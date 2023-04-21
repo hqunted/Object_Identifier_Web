@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { ImageFrame } from "../components/ImageFrame";
+import { recieveImage } from "../services/processImage";
 
 export interface selectedImage {
   selectedImage: string | undefined;
 }
 
 export const ResultImage = ({ selectedImage }: selectedImage) => {
+  useEffect(() => {
+    recieveImage();
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full ">
       <div className="w-full max-w-screen-lg flex flex-col md:flex-col lg:flex-row justify-center items-center relative">
