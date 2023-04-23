@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UploadImage } from "../components/UploadImage";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 import { ResultImage } from "./ResultImage";
+import { pingAPI } from "../services/pingAPI";
 
 export const Home = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -9,6 +10,7 @@ export const Home = () => {
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
+      console.log(file);
       const reader = new FileReader();
       reader.onloadend = () => {
         setSelectedImage(reader.result as string);
@@ -16,6 +18,9 @@ export const Home = () => {
       reader.readAsDataURL(file);
     }
   };
+  useEffect(() => {
+    if (selectedImage) pingAPI(selectedImage);
+  }, [selectedImage]);
 
   return (
     <DefaultLayout>

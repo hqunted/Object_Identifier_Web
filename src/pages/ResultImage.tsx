@@ -5,11 +5,11 @@ import { recieveImage } from "../services/processImage";
 export interface selectedImage {
   selectedImage: string | undefined;
 }
-
+const recievedImg = recieveImage();
 export const ResultImage = ({ selectedImage }: selectedImage) => {
   useEffect(() => {
-    recieveImage();
-  }, []);
+    console.log("SAISJFLKSAFKFSAL");
+  }, [recievedImg]);
   return (
     <div className="flex flex-col items-center justify-center w-full h-full ">
       <div className="w-full max-w-screen-lg flex flex-col md:flex-col lg:flex-row justify-center items-center relative">

@@ -5,7 +5,7 @@ const base64ToImage = (base64: string) => {
 
   return (img.src = base64);
 };
-const saveImage = (imageData: string) => {
+export const saveImage = (imageData: string) => {
   //save image to assets
 };
 
@@ -16,10 +16,10 @@ export const recieveImage = () => {
     console.log("Connected to server");
   });
 
-  socket.on("imageData", (imageData) => {
+  return socket.on("imageData", (imageData) => {
     console.log("Received image data from server");
     console.log(imageData);
-
+    return imageData;
     // Render image data in the frontend
   });
 };
