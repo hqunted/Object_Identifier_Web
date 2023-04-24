@@ -1,15 +1,9 @@
 import io from "socket.io-client";
 
-const base64ToImage = (base64: string) => {
-  const img = new Image();
-
-  return (img.src = base64);
-};
-export const saveImage = (imageData: string) => {
-  //save image to assets
-};
-
 export const recieveImage = () => {
+  const base64ToImage = (base64: string) => {
+    return `data:image/png;base64,${base64}`;
+  };
   const socket = io("http://localhost:3000");
 
   socket.on("connect", () => {
@@ -19,7 +13,7 @@ export const recieveImage = () => {
   return socket.on("imageData", (imageData) => {
     console.log("Received image data from server");
     console.log(imageData);
-    return imageData;
-    // Render image data in the frontend
+    base64ToImage(imageData);
+    return { imageData, base64ToImage };
   });
 };
