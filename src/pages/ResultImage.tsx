@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { ImageFrame } from "../components/ImageFrame";
 import useSocketIo from "../hooks/useSocketIo";
-import { recieveImage } from "../services/processImage";
+import { RecieveImage } from "../services/processImage";
 
 export interface selectedImage {
   selectedImage: string | undefined;
 }
-const recievedImg = recieveImage();
+const recievedImg = RecieveImage();
 
 export const ResultImage = ({ selectedImage }: selectedImage) => {
   useEffect(() => {
