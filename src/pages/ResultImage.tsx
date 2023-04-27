@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { ImageFrame } from "../components/ImageFrame";
-import useSocketIo from "../hooks/useSocketIo";
 import { RecieveImage } from "../services/processImage";
+import { socket } from "../socket";
+import { useState } from "react";
 
 export interface selectedImage {
   selectedImage: string | undefined;
@@ -9,9 +10,23 @@ export interface selectedImage {
 const recievedImg = RecieveImage();
 
 export const ResultImage = ({ selectedImage }: selectedImage) => {
+  const [isConnected, setIsConnected] = useState(socket.connected);
+  const [fooEvents, setFooEvents] = useState([]);
+
   useEffect(() => {
     console.log("SAISJFLKSAFKFSAL");
+    console.log(isConnected);
   }, [recievedImg]);
+
+  useEffect(() => {
+    function onConnect() {
+      setIsConnected(true);
+    }
+
+    function onDisconnect() {
+      setIsConnected(false);
+    }
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full ">
