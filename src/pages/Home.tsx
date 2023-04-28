@@ -3,9 +3,12 @@ import { UploadImage } from "../components/UploadImage";
 import { DefaultLayout } from "../layouts/DefaultLayout";
 import { ResultImage } from "./ResultImage";
 import { pingAPI } from "../services/pingAPI";
+import { LoadingModal } from "../components/LoadingModal";
+import useSocketIo from "../hooks/useSocketIo";
 
 export const Home = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
@@ -21,15 +24,20 @@ export const Home = () => {
   useEffect(() => {
     if (selectedImage) pingAPI(selectedImage);
   }, [selectedImage]);
-
+ 
   return (
     <DefaultLayout>
-      <div className="flex flex-col items-center justify-center w-full h-full ">
+      <div className="flex flex-col items-center justify-center w-full h-full">
         {!selectedImage && (
           <UploadImage handleImageUpload={handleImageUpload} />
         )}
 
-        {selectedImage && <ResultImage selectedImage={selectedImage} />}
+        {selectedImage && (
+          <div>
+            <LoadingModal />
+            <ResultImage selectedImage={selectedImage} />
+          </div>
+        )}
       </div>
     </DefaultLayout>
   );
