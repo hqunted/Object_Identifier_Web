@@ -1,14 +1,22 @@
+import useSocketIo from "../hooks/useSocketIo";
+import classNames from "classnames";
+
 export const LoadingModal = () => {
+  const { recieveImageData } = useSocketIo();
+
   return (
-    <>
-      <div className="flex relative justify-center h-screen align-middle items-center w-screen 2xl:pb-[40%] 2xl:p-4xl xl:pt-lg xl:p-lg xl:pb-2.5xl lg:pt-lg lg:p-md lg:pb-2.5xl md:pt-3.5xl md:pb-3x">
-        <div className="flex w-full 2xl:py-3xl lg:py-1.5xl lg:w-6xl md:py-lg md:pb-3xl py-3xl justify-center rounded-3xl transform bg-gradient-to-br from-blue-300 to-blue-600 shadow-lg">
-          <div className="flex rounded-2xl 2xl:text-7xl 2xl:p-sm xl:p-xs animate-waving-triangle xl:text-2xl lg:p-xxs bg-white lg:text-2xl md:text-4xl md:p-[8%] text-blue-500 ">
-            Processing
-            <div className="flex animate-bounce">...</div>
-          </div>
+    <div
+      className={classNames(
+        "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50",
+        recieveImageData ? "opacity-0" : "opacity-100"
+      )}
+    >
+      <div className="flex justify-center rounded-3xl transform bg-gradient-to-br from-blue-300 to-blue-600 shadow-lg p-2xl ">
+        <div className="flex rounded-2xl bg-white text-blue-500 2xl:text-2xl 2xl:p-sm xl:p-xs lg:text-2xl md:text-4xl md:p-[8%] xl:text-2xl animate-waving-object">
+          Please wait processing
+          <div className="flex animate-bounce">...</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
