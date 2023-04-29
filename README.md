@@ -4,7 +4,6 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
   <h3 align="center">Object Identifier</h3>
 
   <p align="center">
@@ -48,15 +47,13 @@ An app that takes an image from the client and detects objects on that image.
 
 ### Built With
 
-
 - [![TypeScript][typescript.js]][typescript-url]
 - [![React][react.js]][react-url]
 - [![Node.js][node.js]][node-url]
 - [![Express.js][express.js]][express-url]
 - [![Javascript][javascript]][javascript-url]
 - [![TailwindCSS][tailwindcss]][tailwindcss-url]
-
-
+- [![Socket.io][SocketIo]][SocketIo-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,6 +64,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 
 ## Roadmap
+
 - [✔️] Make a UI that takes a Image
 - [✔️] Make the backend.
 - [✔️] Make the UI and backend responsive
@@ -76,7 +74,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Implement the loading screen
   - [ ] ....
   - [ ] ....
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,4 +151,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [javascript-url]: https://www.javascript.com/
 [tailwindcss]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [tailwindcss-url]: https://tailwindcss.com/
-
+[SocketIo]: https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101
+[SocketIo-url]: https://socket.io/
