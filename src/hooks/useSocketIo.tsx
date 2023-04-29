@@ -19,12 +19,10 @@ const useSocketIo = () => {
   useEffect(() => {
     const onConnect = () => {
       setIsConnected(true);
-      console.log("Connected!");
     };
 
     const onDisconnect = () => {
       setIsConnected(false);
-      console.log("Disconnected!");
     };
 
     socket.on("disconnect", onDisconnect);
