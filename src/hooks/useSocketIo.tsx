@@ -8,14 +8,13 @@ const useSocketIo = () => {
   const base64ToImage = (base64: string) => {
     return `data:image/png;base64,${base64}`;
   };
-  console.log(base64ToImage(recieveImageData));
+  const toggleLoadingModal = () => {
+    return recieveImageData ? "opacity-0" : "opacity-100";
+  };
+
   socket.on("imageData", (imageData) => {
     setRecieveImageData(imageData);
   });
-
-  const changeVisibilityOnLoad = () => {
-    return recieveImageData ? "opacity-100" : "opacity-0";
-  };
 
   useEffect(() => {
     const onConnect = () => {
@@ -35,7 +34,11 @@ const useSocketIo = () => {
       socket.off("disconnect", onDisconnect);
     };
   }, []);
-  return { recieveImageData, base64ToImage, changeVisibilityOnLoad };
+  return {
+    recieveImageData,
+    base64ToImage,
+    toggleLoadingModal,
+  };
 };
 
 export default useSocketIo;
