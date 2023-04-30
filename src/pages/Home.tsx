@@ -5,6 +5,7 @@ import { ResultImage } from "./ResultImage";
 import { pingAPI } from "../services/pingAPI";
 import { LoadingModal } from "../components/LoadingModal";
 
+
 export const Home = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -34,6 +35,14 @@ export const Home = () => {
           <div>
             <LoadingModal />
             <ResultImage selectedImage={selectedImage} />
+            <button
+              className="z-50 absolute flex rounded-2xl 2xl:text-md 2xl:p-xxs xl:p-xs xl:text-2xl lg:p-sm bg-white lg:text-2xl md:text-4xl md:p-sm üütext-blue-500 hover:bg-blue-500 hover:text-white cursor-pointer"
+              onClick={() => {
+                setSelectedImage(null);
+              }}
+            >
+              Reset
+            </button>
           </div>
         )}
       </div>
