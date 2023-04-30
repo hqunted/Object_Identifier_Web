@@ -11,14 +11,8 @@ export const LoadingModal = () => {
         toggleLoadingModal()
       )}
     >
-      <div
-        className="flex justify-center rounded-3xl bg-gradient-to-r 
-from-blue-300 
-to-blue-400 
-via-blue-600
-animate-gradient-x shadow-lg p-5xl"
-      >
-        <div className="flex rounded-2xl bg-white text-blue-500 2xl:text-5xl 2xl:p- xl:p-xs lg:text-2xl md:text-4xl md:p-[8%] xl:text-2xl font-amaticsc animate-waving-object">
+      <div className="flex justify-center rounded-3xl bg-gradient-to-r from-blue-300 to-blue-400 via-blue-600 animate-gradient-x shadow-lg p-5xl">
+        <div className="flex rounded-2xl bg-white text-blue-500 2xl:text-5xl xl:p-xs lg:text-3xl md:text-4xl md:p-[8%] xl:text-2xl font-amaticsc animate-waving-object">
           Please wait processing
           <div className="flex animate-bounce">...</div>
         </div>
