@@ -12,6 +12,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
       <div>
         <Header />
         <BackgroundObjects />
+
         {children}
       </div>
     </div>
