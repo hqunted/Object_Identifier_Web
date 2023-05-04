@@ -68,9 +68,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [✔️] Process image and make the identifier predict
 - [✔️] Remake the image and process the identified object to image
 - [✔️] Send image to the UI
-- [ ] Implement the loading screen
-  - [ ] ....
-  - [ ] ....
+- [✔️] Implement the loading screen
+- [✔️] All Done!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
