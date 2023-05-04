@@ -9,9 +9,11 @@
   <p align="center">
     Object Identifier made with a cocoSSD!
     <br />
+     <a href="https://objectidentifierr.netlify.app/">View Demo</a>
+     <br />
   
-    <a href="https://objectidentifierr.netlify.app/">View Demo</a>
-    ·
+ 
+ 
   </p>
 </div>
 
