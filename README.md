@@ -54,8 +54,6 @@ An app that takes an image from the client and detects objects on that image.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
@@ -106,8 +104,6 @@ Project Link: [https://github.com/hqunted/Object_Identifier](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 - [Choose an Open Source License](https://choosealicense.com)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
